@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+compileJava.options.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+}
+
+// JAR сервера
+task serverJar(type: Jar) {
+    archiveFileName = 'server.jar'
+    manifest {
+        attributes 'Main-Class': 'org.example.server.ServerMain'
+    }
+    from sourceSets.main.output
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    destinationDirectory = file("$buildDir/libs")
+}
+
+// JAR клиента
+task clientJar(type: Jar) {
+    archiveFileName = 'client.jar'
+    manifest {
+        attributes 'Main-Class': 'org.example.client.ClientMain'
+    }
+    from sourceSets.main.output
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    destinationDirectory = file("$buildDir/libs")
+}
+
+// Собрать оба
+task buildAll {
+    dependsOn serverJar, clientJar
+}
