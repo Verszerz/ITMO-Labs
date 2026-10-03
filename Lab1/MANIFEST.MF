@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Created-By: Anton Toloknov
+Main-Class: Game
+Class-Path: ./lib/Pokemon.jar
+Start: java -jar FinalGame.jar
+Helios: ssh -l s000000 -p 2222 se.ifmo.ru 
