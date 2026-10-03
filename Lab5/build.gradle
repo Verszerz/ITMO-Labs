@@ -1,0 +1,71 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+}
+
+application {
+    mainClass = 'org.example.Main'
+}
+
+run {
+    environment 'COLLECTION_FILE', System.getenv('COLLECTION_FILE') ?: 'collection.xml'
+    standardInput = System.in
+    jvmArgs = [
+        '-Dfile.encoding=UTF-8',
+        '-Dstdout.encoding=UTF-8',
+        '-Dstderr.encoding=UTF-8',
+        '-Dout.encoding=UTF-8',
+        '-DConsole.encoding=UTF-8'
+    ]
+}
+
+tasks.withType(JavaExec).configureEach {
+    systemProperty 'file.encoding', 'UTF-8'
+    systemProperty 'stdout.encoding', 'UTF-8'
+    systemProperty 'stderr.encoding', 'UTF-8'
+}
+
+jar {
+    archiveFileName = 'lab5.jar'
+    manifest {
+        attributes(
+            'Main-Class': 'org.example.Main',
+            'Implementation-Title': 'Organization Collection Manager',
+            'Implementation-Version': version
+        )
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+javadoc {
+    options.encoding = 'UTF-8'
+    options.charSet  = 'UTF-8'
+    options.author   = true
+    options.version  = true
+    options.windowTitle = 'Organization Collection Manager — Yan Urnerenko'
+    options.docTitle    = 'Organization Collection Manager API'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+// Если вы также генерируете Javadoc, добавьте и это:
+tasks.withType(Javadoc) {
+    options.encoding = 'UTF-8'
+}

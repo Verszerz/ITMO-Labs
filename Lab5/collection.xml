@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organizations>
+  <organization>
+    <id>1</id>
+    <n>Альфа Банк</n>
+    <coordinates>
+      <cx>55.75</cx>
+      <cy>37.62</cy>
+    </coordinates>
+    <creationDate>2024-01-15T10:30:00+03:00</creationDate>
+    <annualTurnover>5000000.0</annualTurnover>
+    <fullName>Акционерное общество Альфа Банк</fullName>
+    <type>PRIVATE_LIMITED_COMPANY</type>
+    <officialAddress>
+      <zipCode>123456</zipCode>
+      <town>
+        <tx>55.75</tx>
+        <ty>37.62</ty>
+        <tz>0.0</tz>
+        <tname>Москва</tname>
+      </town>
+    </officialAddress>
+  </organization>
+  <organization>
+    <id>2</id>
+    <n>Газпром</n>
+    <coordinates>
+      <cx>59.93</cx>
+      <cy>30.32</cy>
+    </coordinates>
+    <creationDate>2024-02-20T14:00:00+03:00</creationDate>
+    <annualTurnover>9.5E9</annualTurnover>
+    <fullName>Публичное акционерное общество Газпром</fullName>
+    <type>GOVERNMENT</type>
+    <officialAddress>
+      <zipCode>190000</zipCode>
+      <town>
+        <tx>59.93</tx>
+        <ty>30.32</ty>
+        <tz>0.0</tz>
+        <tname>Санкт-Петербург</tname>
+      </town>
+    </officialAddress>
+  </organization>
+  <organization>
+    <id>3</id>
+    <n>Вымпел Трест</n>
+    <coordinates>
+      <cx>56.85</cx>
+      <cy>60.61</cy>
+    </coordinates>
+    <creationDate>2024-03-10T09:00:00+05:00</creationDate>
+    <annualTurnover>250000.0</annualTurnover>
+    <fullName>null</fullName>
+    <type>TRUST</type>
+    <officialAddress>
+      <zipCode>620000</zipCode>
+      <town>null</town>
+    </officialAddress>
+  </organization>
+  <organization>
+    <id>4</id>
+    <n>Яндекс</n>
+    <coordinates>
+      <cx>55.75</cx>
+      <cy>37.61</cy>
+    </coordinates>
+    <creationDate>2026-04-07T01:49:52+03:00</creationDate>
+    <annualTurnover>2000000.0</annualTurnover>
+    <fullName>ООО Яндекс</fullName>
+    <type>TRUST</type>
+    <officialAddress>
+      <zipCode>119021</zipCode>
+      <town>
+        <tx>55.75</tx>
+        <ty>37.61</ty>
+        <tz>0.0</tz>
+        <tname>Москва</tname>
+      </town>
+    </officialAddress>
+  </organization>
+</organizations>
